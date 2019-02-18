@@ -1,12 +1,13 @@
 ipAddress = input("please enter an IP address")
 print(ipAddress.count(".")) #counting specific character
-
+#===============================================================================#
 word_list=["wow", "this", "that", "more"]
-
+#===============================================================================#
 word_list.append("plus") #adding word
 for state in word_list:
     print("word list I have is " + state)
 
+#===============================================================================#
 
 even = [2, 4, 6, 8]
 odd = [1, 3, 5, 7, 9]
@@ -17,4 +18,19 @@ print(number)
 
 numbers = even + odd
 print(numbers)
-print(sorted(number))#other way of sorting it
+print(sorted(numbers))#other way of sorting it
+
+number3 = [even, odd] #creating list of two lists
+print(number3) 
+#===============================================================================#
+list_1 = [] #creating enpty list 1
+list_2 = list() #creating enpty list 2
+print("list_1 {}".format(list_1))
+print("list_2 {}".format(list_2))
+
+print(list("each character will be stored in list"))#cut and store each character
+
+even_1 = [2, 4, 6, 8]
+another_even = even_1 #another_even will become same as even_1, updated
+another_even.sort(reverse=True)
+print(even_1)
