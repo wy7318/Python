@@ -34,3 +34,19 @@ even_1 = [2, 4, 6, 8]
 another_even = even_1 #another_even will become same as even_1, updated
 another_even.sort(reverse=True)
 print(even_1)
+
+#===============================================================================#
+menu=[]
+menu.append(["egg", "spam", "bacon"])
+menu.append(["milk", "spam", "sausage"])
+menu.append(["egg", "spam", "bacon"])
+menu.append(["egg", "sausage", "bacon", "milk"])
+menu.append(["egg", "spam", "milk"])
+
+print(menu) #print list of list added
+
+for meal in menu:
+    if "egg" not in meal: #list that does not include egg
+        print(meal)
+        for ingredient in meal:
+            print(ingredient) #print eac item in the list
