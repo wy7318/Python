@@ -10,3 +10,16 @@ print(odd)
 my_string="abcdefghijklmnoptqrstuvwxyz"
 print(my_string.index('e')) #print number of location of 'e'
 print(my_string[4]) #print 4th letter in the list
+
+#=========================================================================
+r = range(0,100)
+print(r)
+
+for i in r[::-2]:
+    print(i)
+
+for i in range(99,0,-2):
+    print(i)
+
+backString = "egaugnal lufrewop yrev a si nohtyP"
+print(backString[::-1])
