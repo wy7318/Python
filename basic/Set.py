@@ -31,5 +31,19 @@ ordered_keys = list(fruit.keys()) #keys method returns values of object
 ordered_keys.sort() # this will make sure set will have same order(Alphabetical) each time
 for i in ordered_keys:
         print(i + "-" + fruit[i])
+#======================================Set to Tuple==============================================
 
-                
+print(fruit.items()) #creating tuples
+
+for snack in fruit.items():
+        item, description = snack
+        print(item + " is " + description)
+        
+#====================================Join Method=====================================================  
+myList = ["a", "b", "c", "d"]
+letters="zxcvbnmmasdfghjklqwertyuiop"
+newString = ",".join(myList)
+newString2=",".join(letters)
+print(newString)
+print(newString2)
+
