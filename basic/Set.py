@@ -47,3 +47,16 @@ newString2=",".join(letters)
 print(newString)
 print(newString2)
 
+#============================Update, Copy Methods========================================================
+
+veg = {"cabbage": "every child's favorite",
+       "sprout" : "mmmm, lovely",
+       "spinach": "can I have some more fruit, please"}
+
+veg.update(fruit) #addinf fruit to veg set
+print(veg)
+print(fruit.update(veg)) #does not do anything
+
+nice_and_nasty = fruit.copy() #copy set
+nice_and_nasty.update(veg)
+print(nice_and_nasty)
