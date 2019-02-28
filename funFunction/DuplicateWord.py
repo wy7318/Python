@@ -1,4 +1,4 @@
-res="this Is what it is".lower().split()
+res=input().lower().split()
 
 
 def isDuplicate(word):
