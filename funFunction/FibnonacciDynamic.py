@@ -10,3 +10,9 @@ def fib(n):
         bottom[i] = bottom[i-1]+bottom[i-2]
     return bottom[n]
 print(fib(3000))
+
+while True:
+    try:
+        print(fib(int(input())))
+    except:
+        break
