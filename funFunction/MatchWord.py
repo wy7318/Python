@@ -1,6 +1,6 @@
 def common_word(str1, str2):
-    str1_s=str1.split()
-    str2_s=str2.split()
+    str1_s=sorted(str1.split())
+    str2_s=sorted(str2.split())
     p1 = 0
     p2 = 0
     result = []
@@ -9,14 +9,11 @@ def common_word(str1, str2):
             result.append(str1_s[p1])
             p1 += 1
             p2 += 1
+        elif str1_s[p1] > str2_s[p2]:
+            p2 += 1
         else:
             p1 += 1
-            if str1_s[p1] == str2_s[p2]:
-                result.append(str1_s[p1])
-                p1 += 1
-                p2 += 1
-            else:
-                p2 += 1
+
 
     return result
 
