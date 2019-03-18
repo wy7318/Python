@@ -53,3 +53,5 @@ tree.root.right.right=Node(7)
 print(tree.print_tree1("preorder"))
 print(tree.print_tree1("inorder"))
 print(tree.print_tree1("postorder"))
+
+#Done by wy7318(Minsub Lee)
