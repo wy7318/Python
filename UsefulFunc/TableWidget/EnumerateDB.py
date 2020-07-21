@@ -10,9 +10,9 @@ from PyQt5.QtWidgets import *
 import mysql.connector
 
 def LoadData(self):
-        connection = mysql.connector.connect(host="45.79.70.200",
-                                             user="optilab",
-                                             password="Usopen97!",
+        connection = mysql.connector.connect(host="22.55.66.777",
+                                             user="exampleUSER",
+                                             password="examplePW",
                                              database="inventory"
                                              )
 
