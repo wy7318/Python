@@ -4,7 +4,7 @@ def Auto_todayOD(input):
     current_time = datetime.datetime.now()
 
     if "/" in input:
-        if input.count("/") == 1:
+        if input.count("/") == 1:           # Count how many '/' is included to distinguish m/d or m/d/y format
             month = input.split("/")[0]     # Number before /
             date = input.split("/")[1]      # Number after /
             year = current_time.year
