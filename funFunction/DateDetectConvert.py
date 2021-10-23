@@ -1,12 +1,12 @@
 def Auto_todayOD(input):
     current_time = datetime.datetime.now()
 
-    if "/" in input:
-        if input.count("/") == 1:           # Count how many '/' is included to distinguish m/d or m/d/y format
+    if "/" in input:                        # If input contain '/'
+        if input.count("/") == 1:           # If mm/dd format
             month = input.split("/")[0]     # Number before /
             date = input.split("/")[1]      # Number after /
             year = current_time.year
-            # Check and catch if date format is correct using datetime 
+            # Check and catch if date format is correct using datetime
             try:
                 t = month + "-" + date + "-" + str(year)
                 t2 = datetime.datetime.strptime(t,"%m-%d-%Y")
@@ -15,24 +15,32 @@ def Auto_todayOD(input):
             except:
                 print("Error")
 
-        elif input.count("/") == 2:
+        elif input.count("/") == 2:         # If mm/dd/yy or mm/dd/yyyy format
             month = input.split("/")[0]     # Number before /
             date = input.split("/")[1]      # Number after /
             year = input.split("/")[2]      # Number after /
-            if int(month) > 12 or int(date) > 31:       #Check if month and date is not out of format
-                print("Incorrect Format")
+            if len(year) == 2:              # /YY format
+                try:
+                    t = month + "-" + date + "-" + "20" + str(year)
+                    t2 = datetime.datetime.strptime(t,"%m-%d-%Y")
+                    finalT = str(t2.strftime('%m-%d-%Y'))
+                    print(finalT)
+                except:
+                    print("Error")
+            elif len(year) == 4:            # /YYYY format
+                try:
+                    t = month + "-" + date + "-" + year
+                    t2 = datetime.datetime.strptime(t,"%m-%d-%Y")
+                    finalT = str(t2.strftime('%m-%d-%Y'))
+                    print(finalT)
+                except:
+                    print("Error")
             else:
-                if len(year) == 2:                      #Check if year format. 2 or 4 digit
-                    print(month + "-" + date + "-" + "20" + str(year))
-                elif len(year) == 4:
-                    print(month + "-" + date + "-" + year)
-                else:
-                    print("Incorrect Format")
+                print("Incorrect Format")
         else:
             print("Incorrect Format")
     else:
         print("Incorrect Format")
-
-print(len("123"))
+        
 date = input("Enter : ")
 Auto_todayOD(date)
