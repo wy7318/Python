@@ -50,9 +50,9 @@ import mysql.connector
 from mysql.connector import MySQLConnection, Error,connect
 
 def AutoDBDateChange():
-    conn = mysql.connector.connect(host="45.79.70.200",
-                                   user="HZ",
-                                   password="Usopen97!",
+    conn = mysql.connector.connect(host="00.00.00.000",
+                                   user="user",
+                                   password="pwd",
                                    database="Sales"
                                    )
     c = conn.cursor()
